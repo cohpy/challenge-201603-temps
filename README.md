@@ -29,12 +29,12 @@ Given a set of dates (particularly the dates returned in Part One), return the h
 Here are a couple of resources to get historical weather observations:
 
 APIs:
-https://www.wunderground.com/weather/api/d/docs?d=data/history
-https://developer.forecast.io/docs/v2#time_call
-https://developer.worldweatheronline.com/api/historical-weather-api.aspx
+ * https://www.wunderground.com/weather/api/d/docs?d=data/history
+ * https://developer.forecast.io/docs/v2#time_call
+ * https://developer.worldweatheronline.com/api/historical-weather-api.aspx
 
 CSV and other data:
-http://www.ncdc.noaa.gov/cdo-web/search
+ * http://www.ncdc.noaa.gov/cdo-web/search
 
 # Part Three
 
