@@ -1,4 +1,4 @@
-# challenge-201603-temps
+#  COhPy March 2016 Challenge
 This is the coding challenge for the Central Ohio Python Users Group for March 2016.
 
 Building on last month's challenge, this month's challenge will involve figuring out dates.
