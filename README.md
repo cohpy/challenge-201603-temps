@@ -20,7 +20,7 @@ Users Group met. You can figure out those dates by implementing the following ru
 
 4. COhPy meets the first Monday of the month in December EXCEPT when that Monday is the 1st or 2nd of December, when it meets on the SECOND Monday.
 
-5. In May, the last Monday of the month is always Memorial Day. In May, COhPy meetings on the second-to-last Monday in May.
+5. In May, to avoid Memorial Day, COhPy meets on the second-to-last Monday of the month.
 
 # Part Two
 
