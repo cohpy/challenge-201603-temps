@@ -9,8 +9,11 @@ a new module, or way of implementing that scratches your itches.
 
 # Part One
 
-Given a month (say May), return a list of dates in that month that the Central Ohio Python
-Users Group met. You can figure out those dates by implementing the following rules:
+Given a month (say February), return a list of dates in that month that the Central Ohio Python
+Users Group met (in the case of February, it would return 2/22/2010, 2/28/2011, 2/27/2012, 
+2/25/2013, 2/24/2014, and 2/29/2015.
+
+You can figure out those dates by implementing the following rules:
 
 1. The first COhPy meeting was September 28, 2009.
 
