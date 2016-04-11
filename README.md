@@ -27,7 +27,8 @@ You can figure out those dates by implementing the following rules:
 
 # Part Two
 
-Given a set of dates (particularly the dates returned in Part One), return the high temperature in Columbus, Ohio for each of those dates.
+Given a set of dates (particularly the dates returned in Part One), return the high temperature in Columbus, Ohio
+at the airport (weather station KCMH) for each of those dates.
 
 Here are a couple of resources to get historical weather observations:
 
@@ -45,7 +46,7 @@ Based on the data in Part Two (or whatever data you want) predict the high tempe
 prediction algorithm will run on meetup day the month prior to the one you are predicting.
 
 At the April 2016 meeting we will run your prediction algorithms, and at the May meetup, the algorithm that most closely
-predicted the high for the May meetup will receive a Python ball cap! In the event of a tie, the tied algorithms will face
-off to predict June (or we'll randomly decide :-)!
+predicted the high reported by weather station KCMH for the May meetup will receive a Python ball cap! In the event of a tie,
+the tied algorithms will face off to predict June (or we'll randomly decide :-)!
 
 
