@@ -11,7 +11,7 @@ a new module, or way of implementing that scratches your itches.
 
 Given a month (say February), return a list of dates in that month that the Central Ohio Python
 Users Group met (in the case of February, it would return 2/22/2010, 2/28/2011, 2/27/2012, 
-2/25/2013, 2/24/2014, and 2/29/2015.
+2/25/2013, 2/24/2014, 2/23/2015, and 2/29/2016.
 
 You can figure out those dates by implementing the following rules:
 
