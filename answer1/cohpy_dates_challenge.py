@@ -1,3 +1,4 @@
+from __future__ import print_function
 from datetime import datetime
 from dateutil.relativedelta import relativedelta as delta
 import sys
@@ -102,30 +103,30 @@ def thify(number):
         return str(number) + 'th'
 
 if len(sys.argv) == 1:
-    print 'Usage: ' + os.path.basename(__file__) + ' <month>'
+    print('Usage: ' + os.path.basename(__file__) + ' <month>')
     exit()
 month = sys.argv[1]
 
-print '==== PART 1 ===='
+print('==== PART 1 ====')
 dates = findAllMeetings(month)
-print 'COhPy has met in ' + month + ' on these dates:'
+print('COhPy has met in ' + month + ' on these dates:')
 for date in dates:
-    print date.strftime('%B ' + thify(date.day) + ', %Y')
+    print(date.strftime('%B ' + thify(date.day) + ', %Y'))
 print
 
-print '==== PART 2 ===='
+print('==== PART 2 ====')
 if False:# Never implemented getting weather from the internet
-    print 'Getting weather information...'
+    print('Getting weather information...')
     weather = getWeatherInfo(True)
 else:
     weather = getWeatherInfo(False)
 temperatures = [weather['{d.year}-{d.month}-{d.day}'.format(d=date)] for date in dates]
-print 'The high temperatures for these days are:'
+print('The high temperatures for these days are:')
 for x in range(len(dates)):
-    print dates[x].strftime('%B ' + thify(dates[x].day) + ', %Y') + ': ' + str(temperatures[x]) + "F"
-print
+    print(dates[x].strftime('%B ' + thify(dates[x].day) + ', %Y') + ': ' + str(temperatures[x]) + "F")
+print()
     
-print '==== PART 3 ===='
+print('==== PART 3 ====')
 # Finding the next month here
 monthNum = months.index(month[:3].lower())
 nextMonth = months[(monthNum+1)%12]
@@ -138,4 +139,4 @@ temperatures2 = [weather['{d.year}-{d.month}-{d.day}'.format(d=date)] for date i
 
 # Prediction
 prediction = int(round(sum(temperatures2) / float(len(temperatures2))))
-print 'I predict the high temperature on the next ' + nextMonth.capitalize() + ' meeting will be: ' + str(prediction) + 'F'
+print('I predict the high temperature on the next ' + nextMonth.capitalize() + ' meeting will be: ' + str(prediction) + 'F')
