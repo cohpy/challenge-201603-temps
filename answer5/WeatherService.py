@@ -1,9 +1,8 @@
 # WeatherService.py
-# Python 2.x only.
 
 import sys
 import json
-import httplib
+import http.client
 
 class WeatherService:
   """Interface to Weather Underground for retrieving raw weather history.
@@ -48,7 +47,7 @@ class WeatherService:
     if len(state)!=2 or not state.isupper(): raise Exception("Invalid state, expected /[A-Z]{2}/: %r"%(state,))
 
   def _validate_station(self,station):
-    if len(station)<1 or len(filter(lambda x:not x.isalnum() and x!='_',station)):
+    if len(station)<1 or len([x for x in station if not x.isalnum() and x!='_']):
       raise Exception("Invalid station name: %r"%(station,))
 
   def _valiDate(self,date):
@@ -83,7 +82,7 @@ class WeatherService:
 
   def _retrieve_http(self,state,station,date):
     path="/api/%s/history_%s/q/%s/%s.json"%(self.api_key,date,state,station)
-    connection=httplib.HTTPConnection(self.SERVICE_HOST)
+    connection=http.client.HTTPConnection(self.SERVICE_HOST)
     connection.putrequest("GET",path)
     connection.endheaders()
     response=connection.getresponse()
@@ -99,7 +98,7 @@ class WeatherService:
     
     try:
       response=json.loads(src)
-    except Exception,e:
+    except Exception as e:
       sys.stderr.write("ERROR: Failed to unmarshal JSON response.\n")
       return hitemp
 

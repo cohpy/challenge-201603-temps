@@ -39,7 +39,7 @@ def main_retrieve_hitemp_only():
   weatherService=WeatherService(API_KEY)
   try:
     hitemp=weatherService.retrieve(request_state,request_station,request_date)
-  except Exception,e:
+  except Exception as e:
     sys.stderr.write("ERROR: Failed to retrieve weather data: %s\n"%(e.message,))
     sys.exit(1)
 
@@ -119,7 +119,7 @@ def main_predict_weather():
   sys.stdout.write("Predicting weather for our %s %s meeting (%s)...\n"%(month_name[next_month],next_year,date))
 
   temps=[]
-  for dyear in xrange(-1,-6,-1):
+  for dyear in range(-1,-6,-1):
   
     date1="%04d"%(next_year+dyear)+date[4:]
     try:
@@ -153,13 +153,6 @@ def main_predict_weather():
 #------------------------------------------------------------------------------
 
 if __name__=="__main__":
-
-  # Python 2.x only, please.
-  if sys.version_info.major==2:
-    pass
-  else:
-    sys.stderr.write("You are using Python version %d. This script only works with 2.\n"%(sys.version_info.major))
-    sys.exit(1)
 
   #main_retrieve_hitemp_only()
   #main_test_date_service()

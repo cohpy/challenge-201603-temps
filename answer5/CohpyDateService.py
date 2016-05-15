@@ -36,8 +36,8 @@ class CohpyDateService:
     if first_month>last_month: return []
 
     results=[]
-    for year in xrange(first_year,last_year+1):
-      for month in xrange(first_month,last_month+1):
+    for year in range(first_year,last_year+1):
+      for month in range(first_month,last_month+1):
         date=self._get_meeting_date(year,month)
         if date is not None: results.append(date)
 
