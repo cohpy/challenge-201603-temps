@@ -6,16 +6,13 @@ from CohpyDateService import CohpyDateService
 
 # Wunderground:
 # http://api.wunderground.com/api/Your_Key/history_YYYYMMDD/q/CA/San_Francisco.json
-# Key: 2041b377886a617a
-# User: aksommerville@gmail.com
 
 # As traffic is throttled, I am caching the response to this request:
-# curl http://api.wunderground.com/api/2041b377886a617a/history_20160301/q/OH/KCMH.json
+# curl http://api.wunderground.com/api/{YourKey}/history_20160301/q/OH/KCMH.json
 # File "weather-history.json"
 
 # Use None as the API_KEY to read from local cache only.
-#API_KEY=None
-API_KEY="2041b377886a617a" # aksommerville
+API_KEY=None
 
 #------------------------------------------------------------------------------
 
